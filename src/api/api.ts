@@ -1,5 +1,5 @@
 import axios from "axios";
-import { normalizeError } from "../errorNormalizer";
+import { normalizeError } from "./errorNormalizer";
 
 export const api = axios.create({
   baseURL: "http://localhost:8080",

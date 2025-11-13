@@ -16,10 +16,3 @@ queryClient.getQueryCache().subscribe((event) => {
     emitError(error.message ?? "Unexpected error");
   }
 });
-
-queryClient.getMutationCache().subscribe((event) => {
-  const error = event?.mutation?.state?.error;
-  if (error) {
-    emitError(error.message ?? "Unexpected error");
-  }
-});

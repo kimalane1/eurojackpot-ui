@@ -1,3 +1,4 @@
+import { DrawsTable } from "../components/DrawsTable";
 import { useDrawsQuery } from "../hooks/useDraws";
 
 export default function DrawsPage() {
@@ -5,6 +6,7 @@ export default function DrawsPage() {
   return (
     <div>
       <h1>Eurojackpot Draws</h1>
+      <DrawsTable data={data || []} loading={!data} />
     </div>
   );
 }
