@@ -5,7 +5,8 @@ export async function apiFetch<T>(url: string): Promise<T> {
   const response = await fetch(`${apiUrl}${url}`);
   let body = null;
   try {
-    body = await response.clone().json();
+    body =  await response.clone().json()
+    return body;
   } catch {
     try {
       body = await response.clone().text();
