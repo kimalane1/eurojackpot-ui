@@ -4,8 +4,9 @@ import "./index.css";
 import App from "./App.tsx";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { QueryClientProvider } from "@tanstack/react-query";
-import { queryClient } from "./api/queryClient.ts";
+
 import { SnackbarProvider } from "./components/SnackbarProvider.tsx";
+import { queryClient } from "./http/queryClient.ts";
 
 const theme = createTheme();
 

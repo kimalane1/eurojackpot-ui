@@ -2,11 +2,11 @@ import { DrawsTable } from "../components/DrawsTable";
 import { useDrawsQuery } from "../hooks/useDraws";
 
 export default function DrawsPage() {
-  const { data } = useDrawsQuery();
+  const { data, isLoading } = useDrawsQuery();
   return (
     <div>
       <h1>Eurojackpot Draws</h1>
-      <DrawsTable data={data || []} loading={!data} />
+      <DrawsTable data={data || []} loading={isLoading} />
     </div>
   );
 }
