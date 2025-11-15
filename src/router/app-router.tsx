@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import StatisticsPage from "../pages/StatisticsPage";
-import DrawsPage from "../pages/DrawsPage";
+import StatisticsPage from "../pages/statistics-page";
+import DrawsPage from "../pages/draws-page";
 
 export default function AppRouter() {
   return (

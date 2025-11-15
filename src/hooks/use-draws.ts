@@ -1,8 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { apiFetch } from "../http/apiFetch";
+import { apiFetch } from "../http/api-fetch";
+import type { Draw } from "../common/Draw";
 
 export function useDrawsQuery(from?: string, to?: string) {
-  return useQuery({
+ return useQuery<Draw[] | null>({
     queryKey: ["draws", { from, to }],
     queryFn: () => {
       const params = new URLSearchParams();

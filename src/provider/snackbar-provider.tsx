@@ -1,6 +1,6 @@
 import { Alert, Snackbar } from "@mui/material";
 import { useEffect, useState, type ReactNode } from "react";
-import { subscribeToErrors } from "../eventBus";
+import { subscribeToErrors } from "../event-bus";
 
 
 interface SnackbarProviderProps {
