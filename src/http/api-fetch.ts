@@ -28,5 +28,6 @@ export async function apiFetch<T>(url: string): Promise<T | null> {
       typeof body === "string"
         ? body
         : body?.message || response.statusText,
+       errors: body?.errors ?? null,
   };
 }

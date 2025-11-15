@@ -17,11 +17,18 @@ queryClient.getQueryCache().subscribe((event) => {
 });
 
 function handleError(error: any) {
-  console.error("Query Error:", error);
   switch (error?.status) {
     case 422:
       emitError(error?.message || "Error 422");
       break;
+    case 400: {
+      if (Array.isArray(error.errors)) {
+        emitError(error.errors[0].message);
+      } else {
+        emitError(error.message || "Error 400");
+      }
+      break;
+    }
     case 404:
       emitError(error?.message || "Error 404");
       break;
