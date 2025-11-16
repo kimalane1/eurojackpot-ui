@@ -18,6 +18,7 @@ vi.mock("../draw-columns", () => ({
   getDrawColumns: vi.fn(() => [{ field: "id", headerName: "ID" }]),
 }));
 
+
 describe("DrawsTable", () => {
   beforeEach(() => {
     vi.clearAllMocks();
