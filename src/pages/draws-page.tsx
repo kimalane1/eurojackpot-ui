@@ -4,7 +4,6 @@ import { useSearchParams } from "react-router-dom";
 import { DrawsTable } from "../components/draws-table";
 import { PageContainer } from "../components/layout/page-container";
 import { SearchFilters } from "../components/search-filter";
-import { emitError } from "../event-bus";
 import { useDrawsQuery } from "../hooks/use-draws";
 import { validateDateRange } from "../utils/date";
 
